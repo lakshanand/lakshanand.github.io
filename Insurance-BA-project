@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Insurance Cost Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
+        h1, h2, h3 { color: #2c3e50; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f8f8f8; }
+        a { color: #2980b9; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+<h1>🩺 Medical Insurance Cost Prediction</h1>
+
+<p>This project builds a predictive model to estimate individual medical insurance charges based on demographic and lifestyle attributes using Linear Regression. It also includes data-driven insights and business recommendations.</p>
+
+<h2>📌 Objective</h2>
+<ul>
+<li>Analyze key drivers of medical insurance costs</li>
+<li>Build a regression model to predict charges</li>
+<li>Provide actionable insights for insurance pricing strategy</li>
+</ul>
+
+<h2>🧩 Dataset Overview</h2>
+<p>Sourced from Kaggle: <a href="https://www.kaggle.com/datasets/mirichoi0218/insurance">Medical Cost Personal Dataset</a></p>
+
+<table>
+<tr><th>Feature</th><th>Description</th></tr>
+<tr><td>age</td><td>Age of insured individual</td></tr>
+<tr><td>sex</td><td>Gender of policyholder</td></tr>
+<tr><td>bmi</td><td>Body Mass Index</td></tr>
+<tr><td>children</td><td>Number of dependents</td></tr>
+<tr><td>smoker</td><td>Smoking status</td></tr>
+<tr><td>region</td><td>Residential region in the US</td></tr>
+<tr><td>charges</td><td>Billed medical charges</td></tr>
+</table>
+
+<h2>🔍 Exploratory Analysis</h2>
+<ul>
+<li>Distribution charts for age, charges, children, BMI</li>
+<li>Pie charts for categorical features (sex, smoker, region)</li>
+<li>BMI categorized into health levels</li>
+<li>3D bar plot for average cost by age group and smoking status</li>
+</ul>
+
+<h2>⚙️ Data Preparation</h2>
+<ul>
+<li>Outlier removal using Z-score</li>
+<li>One-hot encoding for categorical features</li>
+<li>Feature scaling with StandardScaler</li>
+<li>Engineered feature: <code>age * charges</code> for interaction</li>
+</ul>
+
+<h2>🤖 Modeling – Linear Regression</h2>
+<ul>
+<li><strong>R² Score</strong>: 0.92</li>
+<li><strong>RMSE</strong>: 0.28</li>
+<li>The model performs well without overfitting</li>
+</ul>
+
+<h3>🔍 Feature Importance</h3>
+<ul>
+<li>Smoking status is the top cost driver</li>
+<li>Obesity and number of children are secondary drivers</li>
+<li>Age and region also influence cost moderately</li>
+</ul>
+
+<h2>💡 Business Insights</h2>
+<ul>
+<li>Target high-risk groups (smokers, obese individuals)</li>
+<li>Use pricing tiers for risk-based premiums</li>
+<li>Launch preventive programs to reduce future payouts</li>
+</ul>
+
+<h2>📦 Files</h2>
+<ul>
+<li><code>insurance_model.py</code> – Clean Python implementation</li>
+<li><code>notebook.ipynb</code> – Optional interactive notebook</li>
+<li>Visuals from EDA can be found in <code>images/</code></li>
+</ul>
+
+<h2>🛠 Future Improvements</h2>
+<ul>
+<li>Try ensemble models (Random Forest, XGBoost)</li>
+<li>Integrate with Streamlit for real-time pricing dashboard</li>
+<li>Expand feature set with income, location, employment data</li>
+</ul>
+
+<h2>🧑‍💻 Author</h2>
+<p>Laksh Anand<br>
+📫 <a href="mailto:lakshanandjobs@gmail.com">lakshanandjobs@gmail.com</a><br>
+🔗 <a href="https://www.linkedin.com/in/laksh-anand">LinkedIn</a>
+</p>
+
+<hr>
+<p>🚀 This project demonstrates how machine learning and business analysis work hand-in-hand to drive smarter decisions in the insurance industry.</p>
+
+</body>
+</html>
