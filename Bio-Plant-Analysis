@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -13,20 +10,12 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-
-# In[2]:
-
-
 data = pd.read_csv('C:/Users/Laksh/Downloads/Bio Plant Data.csv')
-
-
-# In[3]:
 
 
 data.info()
 
 
-# In[4]:
 
 
 data = data.dropna()
@@ -35,13 +24,13 @@ data = data.drop("West Basin Phenol (ppm)", axis=1)
 data = data.drop("Final Clarifier Phenol (ppm)", axis=1)
 
 
-# In[5]:
+
 
 
 col_names = data.columns.tolist()
 
 
-# In[6]:
+
 
 
 primary = []
@@ -79,7 +68,7 @@ x_Final_Clarifier = Final_Clarifier.drop("Final Clarifier pH" , axis=1)
 y_Final_Clarifier = Final_Clarifier["Final Clarifier pH"]
 
 
-# In[7]:
+
 
 
 def pre_processing(X,y):
@@ -122,7 +111,7 @@ def neural_network(X,y,activation_function):
     
 
 
-# In[8]:
+
 
 
 primary_dict = {}
@@ -132,7 +121,7 @@ primary_dict.update({"relu":neural_network(x_primary,y_primary,"relu")})
 primary_dict.update({"linear regression":linear_regression(x_primary,y_primary)})
 
 
-# In[9]:
+
 
 
 East_Basin_dict = {}
@@ -142,7 +131,7 @@ East_Basin_dict.update({"relu":neural_network(x_East_Basin,y_East_Basin,"relu")}
 East_Basin_dict.update({"linear regression":linear_regression(x_East_Basin,y_East_Basin)})
 
 
-# In[10]:
+
 
 
 West_Basin_dict = {}
@@ -152,7 +141,7 @@ West_Basin_dict.update({"relu":neural_network(x_West_Basin,y_West_Basin,"relu")}
 West_Basin_dict.update({"linear regression":linear_regression(x_West_Basin,y_West_Basin)})
 
 
-# In[11]:
+
 
 
 Final_Clarifier_dict = {}
@@ -162,7 +151,6 @@ Final_Clarifier_dict.update({"relu":neural_network(x_Final_Clarifier,y_Final_Cla
 Final_Clarifier_dict.update({"linear regression":linear_regression(x_Final_Clarifier,y_Final_Clarifier)})
 
 
-# In[12]:
 
 
 print("Primary:", primary_dict)
